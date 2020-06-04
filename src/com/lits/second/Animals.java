@@ -1,17 +1,19 @@
 package com.lits.second;
 
 public class Animals {
-    public final String nameAnimal;
-    public final int ageAnimal;
-    public final String specieAnimal;
+    public int id;
+    public String nameAnimal;
+    public int ageAnimal;
+    public String specieAnimal;
 
-    public Animals(String nameAnimal, int ageAnimal, String specieAnimal) {
+    public Animals(int idAnimals, String nameAnimal, int ageAnimal, String specieAnimal) {
+        this.id = idAnimals;
         this.nameAnimal = nameAnimal;
         this.ageAnimal = ageAnimal;
         this.specieAnimal = specieAnimal;
     }
 
     public void sayAnimal(String nameAnimal, int ageAnimal, String specieAnimal) {
-        System.out.println("Я " + nameAnimal + " породи " + specieAnimal + " мені " + ageAnimal + " років");
+        System.out.println(id + " " + nameAnimal + " породи " + specieAnimal + " " + ageAnimal + " років");
     }
 }

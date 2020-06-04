@@ -1,25 +1,22 @@
 package com.lits.second;
 
-import java.util.Scanner;
-
-import static com.lits.second.Test.Polindrom;
+import static com.lits.second.WorkClass.Polindrom;
 
 public class Main {
     public static void main(String[] args) {
-                     // Поліндром
+        // Поліндром
         System.out.println("Завдання 1: ");
-        Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
-        System.out.println("Веедіть слово для перевірки:" + str);
+        String str = "заказ";
+        System.out.println("заказ");
 
-        if (Polindrom(str))    // Приймаємо результат з методу Polindrome і Виводимо в консоль
-            System.out.println("Так, це поліндром");
+        if (Polindrom(str))    // Приймаємо результат з методу Polindrome і виводимо в консоль
+            System.out.println("Так, це слово поліндром");
         else
-            System.out.println("Ні, це не поліндром");
+            System.out.println("Ні, це слово не поліндром");
 
-                    //
-        Test tst = new Test();
-        tst.goo();
+        // Методи
+        WorkClass tst = new WorkClass();
+        tst.ArrayReverse();
         System.out.println(" ");
         System.out.println("Завдання 3: ");
         Zoo zoo = new Zoo();
@@ -28,7 +25,6 @@ public class Main {
         zoo.max.say();
         zoo.cat.sayAnimal("Мурка", 8, "персицька");
         zoo.dog.sayAnimal("Рекс", 12, "доберман");
-
 
     }
 
