@@ -1,16 +1,23 @@
 package com.lits.hw3;
 
 public class Main {
+
     public static void main(String[] args) {
+
+        // Створюємо ракету
+        SpaceX spaceX = new SpaceX();
 
         // Дані ракети
         System.out.println("Ракета: " + SpaceX.name + " компанії " + SpaceX.nameCompany);
-        System.out.println("Місія: " + SpaceX.mission + " ,дистанція: " + SpaceX.distance + " km");
-        System.out.println("Параметри: Висота " + SpaceX.height + " метрів " + "Вага " + SpaceX.weight + " кг");
+        System.out.println("Місія: " + SpaceX.mission + " ,дистанція: " + spaceX.distance + " km");
+        System.out.println("Параметри: Висота " + spaceX.height + " метрів " + "Вага " + spaceX.weight + " кг");
 
-        // Створюємо екіпаж
+        // Створюємо екіпаж і передаємо дані у метод sayPeople
         System.out.println("Екіпаж: ");
-        People.crewPeople();
+        People max = new People("Max", 53, "командир");
+        max.sayPeople("Max", 53, "командир");
+        People jone = new People("Jone", 49, "пілот");
+        jone.sayPeople("Jone", 49, "пілот");
 
         // Таймер зворотнього відліку
         int[] timer = {1, 2, 3, 4, 5};
@@ -20,15 +27,18 @@ public class Main {
         System.out.println("Старт!!!");
 
         // Полетіли у космос
-        SpaceX.goSpace();
+        spaceX.goSpace();
 
+        // Дані змінились
+        spaceX.weight = 5000;
+        spaceX.fuel = 250;
+        spaceX.distance = 150;
         // Розраховуємо чи хватить палива до МКС, якщо так то летимо на МКС
-        SpaceX.mileage();
-
+        spaceX.mileage();
     }
-
+    
     // МКС
-    public static void goMKS() {
+    public void goMKS() {
 
         System.out.println("... Космічний корабель " + SpaceX.name + " компанії " +
                 SpaceX.nameCompany + " успішно зістикувався з МКС");
