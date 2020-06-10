@@ -1,4 +1,4 @@
-package com.lits.second;
+package com.lits.hw2;
 
 public class Animals {
     public int id;

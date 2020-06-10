@@ -1,6 +1,6 @@
-package com.lits.second;
+package com.lits.hw2;
 
-import static com.lits.second.WorkClass.Polindrom;
+import static com.lits.hw2.WorkClass.Polindrom;
 
 public class Main {
     public static void main(String[] args) {
