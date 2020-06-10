@@ -1,8 +1,8 @@
 package com.lits.hw3;
 
 public class People {
-    public String namePeople, profPeople;
-    public int agePeople;
+    private String namePeople, profPeople;
+    private int agePeople;
 
     // Конструктор екіпажу
     public People(String namePeople, int agePeople, String profPeople) {

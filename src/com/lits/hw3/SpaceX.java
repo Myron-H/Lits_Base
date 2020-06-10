@@ -4,14 +4,13 @@ public class SpaceX {
     // Параметри Crew Dragon і секцій
     public final static String nameCompany = "*SpaceX*";
     public static String name = "<Crew Dragon>", mission = "Політ на МКС";
-    protected int height = 25,     // висота ракети
+    public int height = 25,     // висота ракети
             weight = 8000,         // вага ракети
             weightSection = 1000,  // вага одної секції
             fuel = 400,            // паливо
             distance = 300,        // відстань до МКС
             MaxSpeed = 600,        // максимальна швидкість
             consumption = 1;       // розхід палива на 1 км
-
 
     //  Відокремлення секцій
     public void sepSection(int nameSection) {
