@@ -29,18 +29,8 @@ public class Main {
         // Полетіли у космос
         spaceX.goSpace();
 
-        // Дані змінились
-        spaceX.weight = 5000;
-        spaceX.fuel = 250;
-        spaceX.distance = 150;
         // Розраховуємо чи хватить палива до МКС, якщо так то летимо на МКС
         spaceX.mileage();
     }
-    
-    // МКС
-    public void goMKS() {
 
-        System.out.println("... Космічний корабель " + SpaceX.name + " компанії " +
-                SpaceX.nameCompany + " успішно зістикувався з МКС");
-    }
 }
