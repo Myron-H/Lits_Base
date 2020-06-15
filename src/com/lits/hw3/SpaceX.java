@@ -98,6 +98,6 @@ public class SpaceX extends SpaceCenter {
         People max = new People();
         // взнаємо на скільки км вистачить палива і надсилаємо пілоту
         distanceMks = fuel / consumption;
-        max.sendDistance(distanceMks);
+        max.sendToCenter(distanceMks);
     }
 }
