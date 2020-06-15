@@ -1,36 +1,36 @@
 package com.lits.hw3;
 
+/*
+ * Домашнє завдання 15.06.2020
+ */
 public class Main {
 
     public static void main(String[] args) {
 
-        // Створюємо ракету
+        // Центр управління
+        SpaceCenter spaceCenter = new SpaceCenter();
+        System.out.println("Центр управління " + spaceCenter.getNameCenter());
+
+        // Ракета
         SpaceX spaceX = new SpaceX();
+        spaceX.dataSpaceX();
 
-        // Дані ракети
-        System.out.println("Ракета: " + SpaceX.name + " компанії " + SpaceX.nameCompany);
-        System.out.println("Місія: " + SpaceX.mission + " ,дистанція: " + spaceX.distance + " km");
-        System.out.println("Параметри: Висота " + spaceX.height + " метрів " + "Вага " + spaceX.weight + " кг");
+        // Статус ракети
+        Status statusStop = Status.STOP;
+        System.out.println("Статус ракети: " + Status.STOP);
 
-        // Створюємо екіпаж і передаємо дані у метод sayPeople
-        System.out.println("Екіпаж: ");
-        People max = new People("Max", 53, "командир");
-        max.sayPeople("Max", 53, "командир");
-        People jone = new People("Jone", 49, "пілот");
-        jone.sayPeople("Jone", 49, "пілот");
+        // Екіпаж
+        People people = new People();
+        people.dataPeople();
 
-        // Таймер зворотнього відліку
-        int[] timer = {1, 2, 3, 4, 5};
-        for (int i = timer.length; i >= 1; i--) {
-            System.out.println("Відлік часу: " + i);
-        }
-        System.out.println("Старт!!!");
+        // Підготовка до старту
+        spaceCenter.start();
 
         // Полетіли у космос
         spaceX.goSpace();
 
         // Розраховуємо чи хватить палива до МКС, якщо так то летимо на МКС
-        spaceX.mileage();
-    }
+        spaceX.distanceMks();
 
+    }
 }

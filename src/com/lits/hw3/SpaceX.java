@@ -1,16 +1,25 @@
 package com.lits.hw3;
 
-public class SpaceX {
+public class SpaceX extends SpaceCenter {
     // Параметри Crew Dragon і секцій
-    public final static String nameCompany = "*SpaceX*";
-    public static String name = "<Crew Dragon>", mission = "Політ на МКС";
-    public int height = 25,     // висота ракети
+    public static String name = "<Crew Dragon>";
+    public static int
+            fuel = 400,            // паливо з запасом на 100 км
+            consumption = 1,       // розхід палива на 1 км
+            maxSpeed = 600,        // максимальна швидкість
+            distance = 300,        // відстань з Землі до МКС
+            distanceMks;           // відстань до МКС
+    public int
+            height = 25,           // висота ракети
             weight = 8000,         // вага ракети
-            weightSection = 1000,  // вага одної секції
-            fuel = 400,            // паливо
-            distance = 300,        // відстань до МКС
-            MaxSpeed = 600,        // максимальна швидкість
-            consumption = 1;       // розхід палива на 1 км
+            weightSection = 1000;  // вага секцій
+
+    // Дані ракети
+    public void dataSpaceX() {
+        System.out.println("Ракета: " + name + " компанії " + getNameCompany());
+        System.out.println("Місія: " + super.mission + " , дистанція: " + distance + " km");
+        System.out.println("Параметри: Висота " + height + " метрів " + "Вага " + weight + " кг");
+    }
 
     //  Відокремлення секцій
     public void sepSection(int nameSection) {
@@ -20,9 +29,10 @@ public class SpaceX {
     public void goSpace() {
 
         // Розганяємось
-        for (int i = 0; i <= MaxSpeed; i += 100) {
-            System.out.println("Швидкість " + i);
-            if (i == 400) {
+        for (int speed = 0; speed <= maxSpeed; speed += 100) {
+            System.out.println("Швидкість " + speed);
+
+            if (speed == 400) {
                 // зменшення маси ракети відділенням секції 1
                 weight -= weightSection;
 
@@ -30,7 +40,7 @@ public class SpaceX {
                 distance -= 50;
                 fuel = distance / consumption + 100; // +100 - запас палива
 
-            } else if (i == 500) {
+            } else if (speed == 500) {
                 // зменшення маси ракети відділенням секції 2
                 weight -= weightSection;
 
@@ -38,33 +48,39 @@ public class SpaceX {
                 distance -= 50;
                 fuel = distance / consumption + 100;
 
-            } else if (i == 600) {
+            } else if (speed == 600) {
                 // зменшення маси ракети відділенням секції 3
                 weight -= weightSection;
 
                 // зменшення дистанції і палива до МКС
                 distance -= 50;
                 fuel = distance / consumption + 100;
+
             }
 
-            switch (i) {
+            switch (speed) {
+                case 100:
+                    // Статус ракети
+                    Status statusFly = Status.FLY;
+                    System.out.println("Статус ракети: " + statusFly);
+                    break;
                 case 400:
                     // 400 км/год, Секція 1 відділяється
-                    SpaceX sectionOne = new SectionOne();  // Поліморфизм
+                    SpaceX sectionOne = new SectionOne();
                     sectionOne.sepSection(1);
                     // Виводим змінені параметри у консоль
                     System.out.println("Вага ракети " + weight + ", палива " + fuel + ", дистанція до МКС " + distance);
                     break;
                 case 500:
                     // 500 км/год, Секція 2 відділяється
-                    SpaceX sectionTwo = new SectionTwo();  // Поліморфизм
+                    SpaceX sectionTwo = new SectionTwo();
                     sectionTwo.sepSection(2);
                     // Виводим змінені параметри у консоль
                     System.out.println("Вага ракети " + weight + ", палива " + fuel + ", дистанція до МКС " + distance);
                     break;
                 case 600:
                     // 600 км/год, Секція 3 відділяється
-                    SpaceX sectionThree = new SectionThree();  // Поліморфизм
+                    SpaceX sectionThree = new SectionThree();
                     sectionThree.sepSection(3);
                     // Виводим змінені параметри у консоль
                     System.out.println("Вага ракети " + weight + ", палива " + fuel + ", дистанція до МКС " + distance);
@@ -77,19 +93,11 @@ public class SpaceX {
         }
     }
 
-    // Розхід палива на км
-    public void mileage() {
-        // взнаємо на скільки км вистачить палива
-        int distanceMks;
+    // На скільки км вистачить палива
+    public void distanceMks() {
+        People max = new People();
+        // взнаємо на скільки км вистачить палива і надсилаємо пілоту
         distanceMks = fuel / consumption;
-
-        // якщо відстань більше або рівна до МКС то палива вистачить і летимо до МКС, якщо ні то SOS
-        if (distanceMks >= distance) {
-            System.out.println("Палива вистачить на " + distanceMks + " км");
-            System.out.println("... Космічний корабель " + name + " компанії " +
-                    nameCompany + " успішно зістикувався з МКС");
-        } else {
-            System.out.println("SOS SOS SOS!!! Палива вистачить тільки на " + distanceMks + " км");
-        }
+        max.sendDistance(distanceMks);
     }
 }
