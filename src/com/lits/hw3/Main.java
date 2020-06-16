@@ -16,7 +16,6 @@ public class Main {
         spaceX.dataSpaceX();
 
         // Статус ракети
-        Status statusStop = Status.STOP;
         System.out.println("Статус ракети: " + Status.STOP);
 
         // Екіпаж

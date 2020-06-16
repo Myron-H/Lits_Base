@@ -13,8 +13,7 @@ public class SpaceCenter {
             System.out.println("Відлік часу: " + i);
             if (i == 0) {
                 // Статус ракети
-                Status statusStart = Status.START;
-                System.out.println("Статус ракети: " + statusStart);
+                System.out.println("Статус ракети: " + Status.START);
             }
         }
     }

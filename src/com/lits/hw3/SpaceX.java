@@ -61,8 +61,7 @@ public class SpaceX extends SpaceCenter {
             switch (speed) {
                 case 100:
                     // Статус ракети
-                    Status statusFly = Status.FLY;
-                    System.out.println("Статус ракети: " + statusFly);
+                    System.out.println("Статус ракети: " + Status.FLY);
                     break;
                 case 400:
                     // 400 км/год, Секція 1 відділяється
