@@ -7,8 +7,7 @@ public class Auto {
     public int year;
     public float weight;
     public int maxSpeed;
-
-    private Engine engine;
+    public Engine engine;
 
     // Конструктор Auto
     public Auto(String name, String model, int year, float weight, int maxSpeed,
@@ -26,9 +25,7 @@ public class Auto {
     public Auto() {
     }
 
-    // Вивід у консоль даних авто
+    // Перепис метода у наслідниках
     public void dataAuto() {
-        System.out.println("Назва:" + name + " Модель:" + model + " Рік:" + year +
-                " Вага:" + weight + " Макс швидкість:" + maxSpeed + " VIN:" + engine.getIdEngine());
     }
 }
