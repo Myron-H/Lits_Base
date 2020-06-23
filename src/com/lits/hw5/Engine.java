@@ -22,6 +22,7 @@ public class Engine extends Auto {
         System.out.println("S/N:" + serialNumber + " Тип палива:" + typeEngine + " Обʼєм двигуна:" + powerEngine);
         System.out.println();
     }
+<<<<<<< HEAD
     // Сеттери
     public void setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
@@ -34,4 +35,6 @@ public class Engine extends Auto {
     public void setPowerEngine(double powerEngine) {
         this.powerEngine = powerEngine;
     }
+=======
+>>>>>>> origin
 }

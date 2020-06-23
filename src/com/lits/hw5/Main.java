@@ -18,6 +18,7 @@ public class Main {
         Garage<Car> garageCar = new Garage<>(mercedes, bmw, audi, engineCar);
         garageCar.nameGarage("Garage Cars:");
 
+<<<<<<< HEAD
         // Дані легкових авто і двигунів
         mercedes.dataCarMers();
         Engine engineMers = new Engine();
@@ -39,6 +40,12 @@ public class Main {
         engineAudi.setTypeEngine("gazoline");
         engineAudi.setPowerEngine(3.6);
         engineAudi.dataEngine();
+=======
+        // Дані легкових авто
+        mercedes.dataCarMers();
+        bmw.dataCarBmw();
+        audi.dataCarAudi();
+>>>>>>> origin
 
         // Вантажні авто
         Truck man = new Truck();
@@ -49,6 +56,7 @@ public class Main {
         Garage<Truck> garageTruck = new Garage<>(man, renault, scania, engineTruck);
         garageTruck.nameGarage("Garage Trucks:");
 
+<<<<<<< HEAD
         // Дані вантажних авто і двигунів
         man.dataTruckMan();
         Engine engineMan = new Engine();
@@ -70,6 +78,12 @@ public class Main {
         engineRenault.setTypeEngine("diesel");
         engineRenault.setPowerEngine(15.3);
         engineRenault.dataEngine();
+=======
+        // Дані вантажних авто
+        man.dataTruckMan();
+        scania.dataTruckScania();
+        renault.dataTruckRenault();
+>>>>>>> origin
 
         // Автобуси
         Bus neoplan = new Bus();
@@ -80,6 +94,7 @@ public class Main {
         Garage<Bus> garageBus = new Garage<>(neoplan, volvo, setra, engineBus);
         garageBus.nameGarage("Garage Bus:");
 
+<<<<<<< HEAD
         // Дані автобусів і двигунів
         neoplan.dataBusNeoplan();
         Engine engineNeoplan = new Engine();
@@ -101,6 +116,12 @@ public class Main {
         engineSetra.setTypeEngine("gaz");
         engineSetra.setPowerEngine(14.2);
         engineSetra.dataEngine();
+=======
+        // Дані автобусів
+        neoplan.dataBusNeoplan();
+        volvo.dataBusVolvo();
+        setra.dataBusSetra();
+>>>>>>> origin
 
         // 3 різні типи авто для загаального гаражу
         Car toyota = new Car();
@@ -111,6 +132,7 @@ public class Main {
         Garage<Auto> garageAuto = new Garage<>(toyota, daf, ikarus, engine);
         garageAuto.nameGarage("Garage AutoMix:");
 
+<<<<<<< HEAD
         // Дані різних типів авто і двигунів
         toyota.dataCarToyota();
         Engine engineToyota = new Engine("JHG980", "gaz", 2.6);
@@ -132,5 +154,11 @@ public class Main {
         engineIkarus.setTypeEngine("diesel");
         engineIkarus.setPowerEngine(10.2);
         engineIkarus.dataEngine();
+=======
+        // Дані різних типів авто
+        toyota.dataCarToyota();
+        daf.dataTruckDaf();
+        ikarus.dataBusIkarus();
+>>>>>>> origin
     }
 }

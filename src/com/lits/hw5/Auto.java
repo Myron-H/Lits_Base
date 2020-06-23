@@ -5,6 +5,7 @@ public class Auto {
     public String name;
     public String model;
     public int year;
+<<<<<<< HEAD
     public float weight;
     public int maxSpeed;
     // Двигун
@@ -17,6 +18,15 @@ public class Auto {
         this.year = year;
         this.weight = weight;
         this.maxSpeed = maxSpeed;
+=======
+
+    // Конструктор Auto
+    public Auto(String name, String model, int year) {
+
+        this.name = name;
+        this.model = model;
+        this.year = year;
+>>>>>>> origin
     }
 
     // Конструктор Auto
@@ -25,7 +35,10 @@ public class Auto {
 
     // Вивід у консоль даних авто
     public void dataAuto() {
+<<<<<<< HEAD
         System.out.println("Назва:" + name + " Модель:" + model + " Рік:" + year +
                 " Вага:" + weight + " Макс швидкість:" + maxSpeed);
+=======
+>>>>>>> origin
     }
 }
