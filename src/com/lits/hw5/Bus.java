@@ -10,10 +10,6 @@ public class Bus extends Auto {
 
     }
 
-    // Конструктор Bus
-    public Bus() {
-    }
-
     @Override
     public void dataAuto() {
         System.out.println("Назва:" + name + " Модель:" + model + " Рік:" + year +

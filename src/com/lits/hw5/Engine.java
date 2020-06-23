@@ -13,10 +13,6 @@ public class Engine {
         this.powerEngine = powerEngine;
     }
 
-    // Конструктор Engine
-//    public Engine() {
-//    }
-
     public int getIdEngine() {
         return idEngine;
     }

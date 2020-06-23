@@ -8,9 +8,6 @@ public class Car extends Auto {
         super(name, model, year, weight, maxspeed, idEngine, typeEngine, powerEngine);
     }
 
-    // Конструктор Car
-    public Car() {
-    }
 
     @Override
     public void dataAuto() {

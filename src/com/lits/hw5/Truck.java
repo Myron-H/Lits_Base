@@ -9,10 +9,6 @@ public class Truck extends Auto {
         super(name, model, year, weight, maxspeed, idEngine, typeEngine, powerEngine);
     }
 
-    // Конструктор Truck
-    public Truck() {
-    }
-
     @Override
     public void dataAuto() {
         System.out.println("Назва:" + name + " Модель:" + model + " Рік:" + year +
