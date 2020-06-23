@@ -1,6 +1,6 @@
 package com.lits.hw5;
 
-public class Engine extends Auto implements Automobile {
+public class Engine extends Auto {
 
     private String serialNumber;
     private String typeEngine;

@@ -1,10 +1,10 @@
 package com.lits.hw5;
 
-public class Auto implements Automobile {
+public class Auto {
 
-    private String name;
-    private String model;
-    private int year;
+    public String name;
+    public String model;
+    public int year;
 
     // Конструктор Auto
     public Auto(String name, String model, int year) {
@@ -18,25 +18,7 @@ public class Auto implements Automobile {
     public Auto() {
     }
 
-    // Імплемент методів інтерфейсу Automobile
-    @Override
-    public void name(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public void model(String model) {
-        this.model = model;
-    }
-
-    @Override
-    public void year(int year) {
-        this.year = year;
-    }
-
     // Вивід у консоль даних авто
-    @Override
     public void dataAuto() {
-        System.out.println("Назва:" + name + " Модель:" + model + " Рік:" + year);
     }
 }
