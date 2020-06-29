@@ -35,6 +35,7 @@ public class Main {
         Comparator<Car> sortedTypeEngine = new CustomComparator.TypeEngineComparator();
         Comparator<Car> sortedTypeEngineReverse = new CustomComparator.TypeEngineComparator().reversed();
         Comparator<Car> sortedCapacityEngine = new CustomComparator.CapacityEngineComparator();
+        Comparator<Car> sortedCapacityEngineReverse = new CustomComparator.CapacityEngineComparator().reversed();
 
         System.out.print("Сортування по імені:");
         cars.sort(sortedName);
@@ -73,7 +74,7 @@ public class Main {
         System.out.println(cars);
 
         System.out.print("Сортування по обʼєму двигуна по спаданню:");
-        cars.sort(sortedCapacityEngine.reversed());
+        cars.sort(sortedCapacityEngineReverse);
         System.out.println(cars);
     }
 }
