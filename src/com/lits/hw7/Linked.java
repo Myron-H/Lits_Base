@@ -1,4 +1,4 @@
-package hw7;
+package com.lits.hw7;
 
 public interface Linked<E> {
     void addFirst(E e);

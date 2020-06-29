@@ -1,4 +1,4 @@
-package hw7;
+package com.lits.hw7;
 
 import java.util.ArrayList;
 import java.util.Comparator;

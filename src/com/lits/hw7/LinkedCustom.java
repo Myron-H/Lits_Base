@@ -1,4 +1,4 @@
-package hw7;
+package com.lits.hw7;
 
 public class LinkedCustom<E> implements Linked<E> {
 
