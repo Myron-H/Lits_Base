@@ -33,7 +33,7 @@ public class Main {
         Comparator<Car> sortedYear = new CustomComparator();
         Comparator<Car> sortedYearReverse = new CustomComparator().reversed();
         Comparator<Car> sortedTypeEngine = new CustomComparator.TypeEngineComparator();
-        Comparator<Car> sortedTypeEngineReverse = new CustomComparator.TypeEngineComparator();
+        Comparator<Car> sortedTypeEngineReverse = new CustomComparator.TypeEngineComparator().reversed();
         Comparator<Car> sortedCapacityEngine = new CustomComparator.CapacityEngineComparator();
 
         System.out.print("Сортування по імені:");
