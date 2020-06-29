@@ -27,22 +27,17 @@ public class Main {
         // Компаратори для сортування різних полів
         Comparator<Car> sortedName = new CustomComparator.NameComparator();
         // Для сортування у зворотньому напрямку використав метод reversed()
-        Comparator<Car> sortedNameReverse = new CustomComparator.NameComparator().reversed();
         Comparator<Car> sortedModel = new CustomComparator.ModelComparator();
-        Comparator<Car> sortedModelReverse = new CustomComparator.ModelComparator().reversed();
         Comparator<Car> sortedYear = new CustomComparator();
-        Comparator<Car> sortedYearReverse = new CustomComparator().reversed();
         Comparator<Car> sortedTypeEngine = new CustomComparator.TypeEngineComparator();
-        Comparator<Car> sortedTypeEngineReverse = new CustomComparator.TypeEngineComparator().reversed();
         Comparator<Car> sortedCapacityEngine = new CustomComparator.CapacityEngineComparator();
-        Comparator<Car> sortedCapacityEngineReverse = new CustomComparator.CapacityEngineComparator().reversed();
 
         System.out.print("Сортування по імені:");
         cars.sort(sortedName);
         System.out.println(cars);
 
         System.out.print("Сортування по імені по спаданню:");
-        cars.sort(sortedNameReverse);
+        cars.sort(sortedName.reversed());
         System.out.println(cars);
 
         System.out.print("Сортування по моделі:");
@@ -50,7 +45,7 @@ public class Main {
         System.out.println(cars);
 
         System.out.print("Сортування по моделі по спаданню:");
-        cars.sort(sortedModelReverse);
+        cars.sort(sortedModel.reversed());
         System.out.println(cars);
 
         System.out.print("Сортування по року:");
@@ -58,7 +53,7 @@ public class Main {
         System.out.println(cars);
 
         System.out.print("Сортування по року по спаданню:");
-        cars.sort(sortedYearReverse);
+        cars.sort(sortedYear.reversed());
         System.out.println(cars);
 
         System.out.print("Сортування по типу двигуна:");
@@ -66,7 +61,7 @@ public class Main {
         System.out.println(cars);
 
         System.out.print("Сортування по типу двигуна по спаданню:");
-        cars.sort(sortedTypeEngineReverse);
+        cars.sort(sortedTypeEngine.reversed());
         System.out.println(cars);
 
         System.out.print("Сортування по обʼєму двигуна:");
@@ -74,7 +69,7 @@ public class Main {
         System.out.println(cars);
 
         System.out.print("Сортування по обʼєму двигуна по спаданню:");
-        cars.sort(sortedCapacityEngineReverse);
+        cars.sort(sortedCapacityEngine.reversed());
         System.out.println(cars);
     }
 }
