@@ -1,6 +1,6 @@
 package com.lits.hw7;
 
-public class Car extends CustomComparator {
+public class Car {
     private String name;
     private String model;
     private int releaseYear;
@@ -16,45 +16,25 @@ public class Car extends CustomComparator {
         this.capacityEngine = capacityEngine;
     }
 
-    // Гетери і сетери
+    // Гетери
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getModel() {
         return model;
     }
 
-    public void setModel(String model) {
-        this.model = model;
-    }
-
     public int getReleaseYear() {
         return releaseYear;
-    }
-
-    public void setReleaseYear(int releaseYear) {
-        this.releaseYear = releaseYear;
     }
 
     public String getTypeEngine() {
         return typeEngine;
     }
 
-    public void setTypeEngine(String typeEngine) {
-        this.typeEngine = typeEngine;
-    }
-
     public float getCapacityEngine() {
         return capacityEngine;
-    }
-
-    public void setCapacityEngine(float capacityEngine) {
-        this.capacityEngine = capacityEngine;
     }
 
     // Перезапис методу для строкового виводу у консоль
